@@ -1,13 +1,15 @@
 --place UNIQUE and NOT NULL constraints on code
 SELECT * FROM parts LIMIT 10;
 
-----place  NOT NULL constraints on code
-ALTER TABLE parts
-ALTER COLUMN code SET NOT NULL;
 
 --place UNIQUE constraints on code
 ALTER TABLE parts
 ADD UNIQUE(code);
+
+----place  NOT NULL constraints on code
+ALTER TABLE parts
+ALTER COLUMN code SET NOT NULL;
+
 
 --updating these values before adding a constraint
 UPDATE parts
